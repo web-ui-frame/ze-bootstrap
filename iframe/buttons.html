@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="zh" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+  <title>管理系统</title>
+
+  <!-- ======基础样式开始======-->
+  <link href="css/bootstrap/style.default.css" rel="stylesheet">
+  <!--换肤-->
+  <link href="css/bootstrap/style.katniss.css" rel="stylesheet">
+  <!--IE8兼容样式-->
+  <link href="css/bootstrap/navigateLowerIE8.css" rel="stylesheet">
+  <!-- ======基础样式结束======-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="js/bootstrap/html5shiv.js"></script>
+  <script src="js/bootstrap/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="stickyheader">
+<div class="contentpanel">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-btns">
+        <a href="" class="panel-close">x</a>
+        <a href="" class="minimize">-</a>
+      </div>
+      <h4 class="panel-title">基础样式</h4>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="subtitle">基础按钮</h5>
+          <p>用任意一个按钮样式创建按钮</p>
+          <br />
+          <div class="btn-demo">
+            <a class="btn btn-default">.btn-default</a>
+            <a class="btn btn-primary">.btn-primary</a>
+            <a class="btn btn-success">.btn-success</a>
+            <a class="btn btn-warning">.btn-warning</a>
+            <a class="btn btn-danger">.btn-danger</a>
+            <a class="btn btn-info">.btn-info</a>
+            <a class="btn btn-white">.btn-white</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h5 class="subtitle">自定义按钮</h5>
+          <p>用任意一个按钮样式创建按钮</p>
+          <br />
+          <div class="btn-demo">
+            <a class="btn btn-brown">.btn-brown</a>
+            <a class="btn btn-black">.btn-black</a>
+            <a class="btn btn-pink">.btn-pink</a>
+            <a class="btn btn-darkblue">.btn-darkblue</a>
+            <a class="btn btn-orange">.btn-orange</a>
+            <a class="btn btn-maroon">.btn-maroon</a>
+            <a class="btn btn-lightblue">.btn-lightblue</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h5 class="subtitle">边框按钮</h5>
+          <p>这是一种仅显示边框的按钮。你可以添加<code>-alt</code> 到默认按钮的类名上，就像<code>.btn-primary-alt</code>这样</p>
+          <br />
+          <div class="btn-demo">
+            <a class="btn btn-default-alt">Default</a>
+            <a class="btn btn-primary-alt">Primary</a>
+            <a class="btn btn-success-alt">Success</a>
+            <a class="btn btn-warning-alt">Warning</a>
+            <a class="btn btn-danger-alt">.Danger</a>
+            <a class="btn btn-info-alt">Info</a>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- panel-body -->
+  </div><!-- panel -->
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-btns">
+            <a href="" class="panel-close">&times;</a>
+            <a href="" class="minimize">&minus;</a>
+          </div>
+          <h4 class="panel-title">按钮大小</h4>
+        </div>
+        <div class="panel-body">
+          <p>需要大按钮还是小按钮？ 添加 <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code>类到你需要的按钮上</p>
+          <br />
+          <div class="m-15">
+            <button class="btn btn-default btn-lg">大按钮.btn-lg</button>
+            <button class="btn btn-primary btn-lg">大按钮.btn-lg</button>
+          </div>
+          <div class="m-15">
+            <button class="btn btn-default">默认按钮</button>&nbsp;
+            <button class="btn btn-primary">默认按钮</button>
+          </div>
+          <div class="m-15">
+            <button class="btn btn-default btn-sm">小按钮.btn-sm</button>&nbsp;
+            <button class="btn btn-primary btn-sm">小按钮.btn-sm</button>
+          </div>
+          <div class="m-15">
+            <button class="btn btn-default btn-xs">超小按钮.btn-xs</button>&nbsp;
+            <button class="btn btn-primary btn-xs">超小按钮.btn-xs</button>
+          </div>
+
+        </div><!-- panel-body -->
+      </div><!-- panel -->
+    </div><!-- col-md-4 -->
+
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-btns">
+            <a href="" class="panel-close">&times;</a>
+            <a href="" class="minimize">&minus;</a>
+          </div>
+          <h4 class="panel-title">块级按钮（占据一整行）</h4>
+        </div>
+        <div class="panel-body">
+          <p>通过添加 <code>.btn-block</code>创建块级按钮</p>
+          <br />
+          <p><button class="btn btn-default btn-lg btn-block">块级按钮会很长</button></p>
+          <p><button class="btn btn-primary btn-block">块级按钮会很长</button></p>
+          <p><button class="btn btn-white btn-sm btn-block">块级按钮会很长</button></p>
+        </div><!-- panel-body -->
+      </div><!-- panel -->
+    </div><!-- col-md-4 -->
+  </div><!-- row -->
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-btns">
+        <a href="" class="panel-close">&times;</a>
+        <a href="" class="minimize">&minus;</a>
+      </div>
+      <h4 class="panel-title">按钮组</h4>
+      <p>多个按钮排列在一起形成的按钮组。 </p>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-4">
+          <p>用<code>.btn-group</code>的容器（div），包含带<code>.btn</code>类的按钮</p>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">Left</button>
+            <button type="button" class="btn btn-default">Middle</button>
+            <button type="button" class="btn btn-default">Right</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary">Left</button>
+            <button type="button" class="btn btn-primary">Middle</button>
+            <button type="button" class="btn btn-primary">Right</button>
+          </div>
+        </div><!-- col-md-4 -->
+
+        <div class="col-md-4">
+          <p>将<code>btn-group</code> 放到<code>btn-toolbar</code> 形成一个更复杂的工具条。</p>
+          <div class="btn-toolbar">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default">1</button>
+              <button type="button" class="btn btn-default">2</button>
+              <button type="button" class="btn btn-default">3</button>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">Next</button>
+              <button type="button" class="btn btn-primary">Last</button>
+            </div>
+          </div><!-- btn-toolbar -->
+        </div><!-- col-md-4 -->
+
+        <div class="col-md-4">
+          <p>当你需要下拉菜单按钮的时候，可以在按钮组<code>.btn-group</code>里放入另一个<code>.btn-group</code></p>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                下拉
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">下拉链接</a></li>
+                <li><a href="#">下拉链接</a></li>
+              </ul>
+            </div>
+          </div><!-- btn-group -->
+        </div><!-- col-md-4 -->
+
+      </div>
+    </div><!-- panel-body -->
+  </div><!-- panel -->
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-btns">
+        <a href="" class="panel-close">&times;</a>
+        <a href="" class="minimize">&minus;</a>
+      </div>
+      <h4 class="panel-title">下拉按钮</h4>
+    </div><!-- panel-heading -->
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="subtitle">单独下拉按钮</h5>
+          <p>将按钮转换成下拉按钮</p>
+          <br />
+          <div class="btn-group mr5">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+          <div class="btn-group mr5">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+          <div class="btn-group mr5">
+            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+              Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+          <div class="btn-group mr5">
+            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+              Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+          <div class="btn-group mr5">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+              Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
+              Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+        </div><!-- col-md-4 -->
+        <div class="col-md-4">
+          <h5 class="subtitle">间隔下拉按钮</h5>
+          <p>创建带间隔线的下拉按钮</p>
+          <br />
+          <div class="btn-group mr5">
+            <button type="button" class="btn btn-default">Action</button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+          <div class="btn-group mr5">
+            <button type="button" class="btn btn-primary">Action</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+          <div class="btn-group mr5">
+            <button type="button" class="btn btn-success">Action</button>
+            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+          <div class="btn-group mr5">
+            <button type="button" class="btn btn-warning">Action</button>
+            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+          <div class="btn-group mr5">
+            <button type="button" class="btn btn-danger">Action</button>
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-white">Action</button>
+            <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+        </div><!-- col-md-4 -->
+        <div class="col-md-4">
+          <h5 class="subtitle">下拉菜单大小</h5>
+          <p>下拉按钮可以使用其他任意按钮样式。</p>
+          <br />
+          <div class="btn-group mr5">
+            <button type="button" class="btn btn-lg btn-default">Action</button>
+            <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+          <div class="btn-group mr5">
+            <button type="button" class="btn btn-white">Action</button>
+            <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-xs btn-primary">Action</button>
+            <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div><!-- btn-group -->
+
+        </div><!-- col-md-4 -->
+      </div><!-- row -->
+    </div><!-- panel-body -->
+  </div><!-- panel -->
+
+</div><!-- contentpanel -->
+
+
+<script src="js/bootstrap/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/bootstrap/modernizr.min.js"></script>
+<script src="js/bootstrap/retina.min.js"></script>
+
+<script src="js/bootstrap/custom.js"></script>
+<!--右侧页面公用js开始-->
+<script src="js/util/util.js"></script>
+<!--右侧页面公用js结束-->
+
+</body>
+</html>

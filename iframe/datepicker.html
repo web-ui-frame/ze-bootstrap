@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="zh" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+    <title>管理系统</title>
+    <!-- ======基础样式开始======-->
+
+    <link href="css/bootstrap/style.default.css" rel="stylesheet">
+    <!--换肤-->
+    <link href="css/bootstrap/style.katniss.css" rel="stylesheet">
+    <!--当前页面css开始-->
+    <link rel="stylesheet" href="js/bootstrap-datepicker/css/datepicker.css"/>
+    <!--当前页面css结束-->
+    <!--IE8兼容样式-->
+    <link href="css/bootstrap/navigateLowerIE8.css" rel="stylesheet">
+    <!-- ======基础样式结束======-->
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/bootstrap/html5shiv.js"></script>
+    <script src="js/bootstrap/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="contentpanel">
+    <!--页面标题开始-->
+    <div class="pageheader">
+        <h2><i class="fa fa-calendar"></i>时间控件</h2>
+    </div>
+    <!--页面标题结束-->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns"><a href="#" class="minimize">−</a></div>
+            <h4 class="panel-title">单独日期选择</h4>
+        </div>
+        <div class="panel-body">
+            <div class="alert alert-info">
+                普通日期控件，要点：直接在input上添加date-picker类即可
+            </div>
+
+            <div class="form-horizontal">
+                <div class="row">
+
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label class="control-label col-xs-4">默认格式</label>
+
+                            <div class="col-xs-8">
+                                <div class="input-group">
+                                    <input type="mumber" class="form-control date-picker" placeholder="开始日期">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label class="control-label col-xs-4">自定义格式</label>
+
+                            <div class="col-xs-8">
+                                <div class="input-group">
+                                    <input type="text" class="form-control date-picker" placeholder="开始日期"
+                                           data-date-format="yyyy/mm/dd">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                                <div class="help-block">自定义格式，需要在input 上添加data-date-format="yyyy/mm/dd"来定义格式
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns"><a href="#" class="minimize">−</a></div>
+            <h4 class="panel-title">单独日期选择</h4>
+        </div>
+        <div class="panel-body">
+            <div class="alert alert-info">
+                禁用当天之前的使用：在input的父级div上添加 date和datepicker-disabled-past类 data-date-format="yyyy-mm-dd"
+                data-date-start-date="Date.default"
+            </div>
+            <div class="form-horizontal">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label class="control-label col-xs-4">禁用当天之前</label>
+
+                            <div class="col-xs-8">
+                                <div class="input-group  date datepicker-disabled-past"
+                                     data-date-format="yyyy-mm-dd" data-date-start-date="Date.default">
+                                    <input type="text" class="form-control" placeholder="开始日期">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns"><a href="#" class="minimize">−</a></div>
+            <h4 class="panel-title">起始日期选择</h4>
+        </div>
+        <div class="panel-body">
+            <div class="alert alert-info">
+                起始日期选择，要点：在开始input和结束input的父级div上添加input-daterange类
+            </div>
+            <div class="form-horizontal">
+                <div class="row m-b-10">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">选择时间</label>
+
+                            <div class="col-sm-8">
+                                <div class="input-group  input-daterange">
+                                    <input type="text" class="form-control" placeholder="开始日期">
+                                    <span class="input-group-addon">至</span>
+                                    <input type="text" class="form-control" placeholder="开始日期">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">选择时间</label>
+
+                            <div class="col-sm-8">
+                                <div class="input-group input-daterange">
+                                    <input type="text" class="form-control" placeholder="开始日期">
+                                    <span class="input-group-addon">至</span>
+                                    <input type="text" class="form-control" placeholder="开始日期">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">选择时间</label>
+
+                            <div class="col-sm-8">
+                                <div class="input-group   input-daterange">
+                                    <input type="text" class="form-control" placeholder="开始日期">
+                                    <span class="input-group-addon">至</span>
+                                    <input type="text" class="form-control" placeholder="开始日期">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div >
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-btns"><a href="#" class="minimize">−</a></div>
+                <h4 class="panel-title">直接显示日历</h4>
+            </div>
+            <div class="panel-body">
+                <div class="alert alert-info">
+                    直接在容器div上添加datepicker-inline类即可。
+                </div>
+                <div class="datepicker-inline"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--基础js开始-->
+<script src="js/bootstrap/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/bootstrap/modernizr.min.js"></script>
+<script src="js/bootstrap/retina.min.js"></script>
+<script src="js/bootstrap/custom.js"></script>
+<!--基础ji结束-->
+<!--当前页js开始-->
+
+<script src="js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<!--当前页js结束-->
+<SCRIPT type="text/javascript">
+
+    $(document).ready(function () {
+
+//datepicker
+        $(".date-picker,.input-daterange,.datepicker-disabled-past,.datepicker-inline").datepicker({
+            todayHighlight: !0,
+            autoclose: !0
+        })
+    });
+</SCRIPT>
+</body>
+</html>

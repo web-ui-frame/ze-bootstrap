@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="zh" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>管理系统</title>
+    <!-- ======基础样式开始======-->
+    <link href="../../css/bootstrap/style.default.css" rel="stylesheet">
+    <!--换肤-->
+    <link href="../../css/bootstrap/style.katniss.css" rel="stylesheet">
+    <!--IE8兼容样式-->
+    <link href="../../css/bootstrap/navigateLowerIE8.css" rel="stylesheet">
+
+    <!-- ======基础样式结束======-->
+    <!--本页单独用到的css-->
+    <link href="../../js/bootstrap-datepicker/css/datepicker.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../js/bootstrap/html5shiv.js"></script>
+    <script src="../../js/bootstrap/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="contentpanel">
+    <div class="pageheader">
+        <h2><i class="fa fa-gears"></i> 商品管理 </h2>
+        <div class="breadcrumb-wrapper">
+            <span class="label">当前位置:</span>
+            <ol class="breadcrumb">
+                <li><a href="../index/home-page.html">首页</a></li>
+                <li><a href="../goods/goods.html">供应链管理</a></li>
+                <li class="active">商品管理</li>
+            </ol>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns"><a href="#" class="minimize">−</a></div>
+            <h4 class="panel-title">查询</h4>
+        </div>
+        <div class="panel-body">
+            <form action="" class="form-horizontal">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label for="select1" class="control-label col-xs-5">审核状态：</label>
+
+                            <div class="col-xs-7">
+                                <select name="" id="select1" class="form-control">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label for="select2" class="control-label col-xs-5">上下架状态：</label>
+
+                            <div class="col-xs-7">
+                                <select name="" id="select2" class="form-control">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label for="select4" class="control-label col-xs-5">工作组：</label>
+                            <div class="col-xs-7">
+                                <select name="" id="select4" class="form-control">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="adv-search-div" style="display:none;">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label for="select5" class="control-label col-xs-5">品牌：</label>
+
+                            <div class="col-xs-7">
+                                <select name="" id="select5" class="form-control">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label class="control-label col-xs-5">商品名称：</label>
+
+                            <div class="col-xs-7">
+                                <input type="text" class="form-control" placeholder="请输入商品名称"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label class="control-label col-xs-5">商品编号：</label>
+
+                            <div class="col-xs-7">
+                                <input type="text" class="form-control" placeholder="请输入商品编号"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label class="control-label col-xs-5">SPU编号：</label>
+                            <div class="col-xs-7">
+                                <input type="text" class="form-control" placeholder="请输入商品编号"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label class="control-label col-xs-5">SKU编号：</label>
+
+                            <div class="col-xs-7">
+                                <input type="text" class="form-control" placeholder="请输入商品编号"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label class="control-label col-xs-5">厂商货号：</label>
+
+                            <div class="col-xs-7">
+                                <input type="text" class="form-control" placeholder="请输入商品编号"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label class="control-label col-xs-5">一级分类：</label>
+
+                            <div class="col-xs-7">
+                                <select name=""  class="form-control">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label class="control-label col-xs-5">二级分类：</label>
+
+                            <div class="col-xs-7">
+                                <select name="" class="form-control">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label class="control-label col-xs-5">三级分类：</label>
+
+                            <div class="col-xs-7">
+                                <select name="" class="form-control">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label class="control-label col-xs-5">创建开始时间：</label>
+
+                            <div class="col-xs-7">
+                                <div class="input-group">
+                                    <input class="form-control date-picker" type="text" placeholder="开始时间"/>
+                                <span class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group">
+                            <label class="control-label col-xs-5">创建结束时间：</label>
+                            <div class="col-xs-7">
+                                <div class="input-group mb15">
+                                    <input class="form-control date-picker" type="text" placeholder="结束时间"/>
+                                <span class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label class="control-label col-xs-5">是否有图片：</label>
+
+                            <div class="col-xs-7">
+                                <select name="" class="form-control">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="form-group m-b-15">
+                            <label class="control-label col-xs-5">是否有库存：</label>
+
+                            <div class="col-xs-7">
+                                <select name="" class="form-control">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> 查询</button>
+                    <button type="button" class="btn btn-primary" id="adv-search">显示高级查询</button>
+                    <a href="goods-add.html" class="btn btn-success"><i class="fa fa-plus"></i> 新建</a>
+                    <button type="submit" class="btn btn-warning"><i class="fa fa-sign-out"></i> 导出</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">查询结果</h4>
+        </div>
+        <div class="panel-body-nopadding">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab"><strong>商品</strong></a></li>
+                <li><a href="#tab2" data-toggle="tab"><strong>SPU</strong></a></li>
+                <li><a href="#tab3" data-toggle="tab"><strong>SKU</strong></a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab1">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover table-condensed">
+                            <thead>
+                            <tr>
+                                <th>商品编号</th>
+                                <th>商品名称</th>
+                                <th>商品状态</th>
+                                <th>商品分类</th>
+                                <th>品牌</th>
+                                <th>商品厂商编号</th>
+                                <th>SKU属性</th>
+                                <th>操作时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1212121</td>
+                                <td>商品名称</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            <tr>
+                                <td>1212121</td>
+                                <td>商品名称</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            <tr>
+                                <td>1212121</td>
+                                <td>商品名称</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            <tr>
+                                <td>1212121</td>
+                                <td>商品名称</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            <tr>
+                                <td>1212121</td>
+                                <td>商品名称</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <div class="dataTables_info pull-left" id="table1_info" role="status" aria-live="polite">显示从 1 到 4 共 4 页</div>
+                            <ul class="pagination pull-right">
+                                <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                <li><a href="#">1</a></li>
+                                <li class="active"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab2">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover table-condensed">
+                            <thead>
+                            <tr>
+                                <th>SPU编号</th>
+                                <th>SPU名称</th>
+                                <th>图片</th>
+                                <th>商品编号</th>
+                                <th>商品分类</th>
+                                <th>SPU属性名称</th>
+                                <th>商品属性组</th>
+                                <th>SKU属性</th>
+                                <th>操作人</th>
+                                <th>操作时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1212121</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            <tr>
+                                <td>1212121</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            <tr>
+                                <td>1212121</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            <tr>
+                                <td>1212121</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            <tr>
+                                <td>1212121</td>
+                                <td>商品名称</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <div class="dataTables_info pull-left" id="table2_info" role="status" aria-live="polite">显示从 1 到 4 共 4 页</div>
+                            <ul class="pagination pull-right">
+                                <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                <li><a href="#">1</a></li>
+                                <li class="active"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab3">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover table-condensed">
+                            <thead>
+                            <tr>
+                                <th><input type="checkbox" name="check-all"/></th>
+                                <th>SKU编号</th>
+                                <th>图片</th>
+                                <th>SKU名称</th>
+                                <th>SPU属性名称</th>
+                                <th>SKU属性名称</th>
+                                <th>厂商货号</th>
+                                <th>市场价</th>
+                                <th>中免价</th>
+                                <th>总库存</th>
+                                <th>上下架状态</th>
+                                <th>操作时间</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><input type="checkbox" name="check-list"/></td>
+                                <td>1212121</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="check-list"/></td>
+                                <td>1212121</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="check-list"/></td>
+                                <td>1212121</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="check-list"/></td>
+                                <td>1212121</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="check-list"/></td>
+                                <td>1212121</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a href="goods-view.html" class="btn btn-xs btn-primary"><i class="fa fa-eye"></i> 查看</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <div class="dataTables_info pull-left" id="table3_info" role="status" aria-live="polite">显示从 1 到 4 共 4 页</div>
+                            <ul class="pagination pull-right">
+                                <li class="disabled"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                <li><a href="#">1</a></li>
+                                <li class="active"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="../../js/bootstrap/jquery-1.11.1.min.js"></script>
+<script src="../../js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/bootstrap/modernizr.min.js"></script>
+<script src="../../js/bootstrap/retina.min.js"></script>
+<script src="../../js/util/util.js"></script>
+<!--让低版本IE支持placeholder-->
+<script src="../../js/bootstrap/jquery.placeholder.min.js"></script>
+<!--时间控件-->
+<script src="../../js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+<script>
+    $(function () {
+        //让低版本IE支持placeholder
+        $('input, textarea').placeholder();
+        $(".date-picker").datepicker({
+            hightlight:true,
+            autoclose:true
+        })
+        //显示隐藏高级查询
+        $("#adv-search-div").hide();
+        $("#adv-search").on('click',function(){
+            $("#adv-search-div").slideToggle();
+            if($(this).hasClass('btn-primary')){
+                $(this).removeClass("btn-primary").addClass('btn-warning');
+                $(this).html("隐藏高级查询");
+            }else{
+                $(this).removeClass("btn-warning").addClass('btn-primary');
+                $(this).html("显示高级查询");
+            }
+
+        })
+    })
+</script>
+</body>
+</html>

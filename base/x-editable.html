@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="zh" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+    <title>管理系统</title>
+
+    <!-- ======基础样式开始======-->
+    <link href="css/style.default.css" rel="stylesheet">
+    <!--换肤-->
+    <link href="css/style.katniss.css" rel="stylesheet">
+    <!--IE8兼容样式-->
+    <link href="css/navigateLowerIE8.css" rel="stylesheet">
+    <!-- ======基础样式结束======-->
+    <link href="css/morris.css" rel="stylesheet">
+    <link href="css/bootstrap-editable.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="stickyheader">
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
+</div>
+
+
+<section>
+  
+  <div class="leftpanel sticky-leftpanel">
+
+    <div class="leftpanelinner">
+        
+        <!-- This is only visible to small devices -->
+        <div class="visible-xs hidden-sm hidden-md hidden-lg">   
+            <div class="media userlogged">
+                <img alt="" src="images/photos/loggeduser.png" class="media-object">
+                <div class="media-body">
+                    <h4>系统管理员</h4>
+                    <span>"Life is so..."</span>
+                </div>
+            </div>
+          
+            <h5 class="sidebartitle actitle">帐户</h5>
+            <ul class="nav nav-pills nav-stacked nav-bracket mb30">
+              <li><a href="profile.html"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+              <li><a href=""><i class="fa fa-cog"></i> <span>帐户设置</span></a></li>
+              <li><a href=""><i class="fa fa-question-circle"></i> <span>帮助</span></a></li>
+              <li><a href="signout.html"><i class="fa fa-sign-out"></i> <span>注销</span></a></li>
+            </ul>
+        </div>
+      
+      <a class="menutoggle"><i class="fa fa-bars"></i></a>
+      <ul class="nav nav-pills nav-stacked nav-bracket">
+        <li><a href="index.html"><i class="fa fa-home"></i> <span>主页</span></a></li>
+        <li><a href="email.html"><span class="pull-right badge badge-success">2</span><i class="fa fa-envelope-o"></i> <span>电子邮件</span></a></li>
+        <li class="nav-parent nav-active active"><a href=""><i class="fa fa-edit"></i> <span>表单</span></a>
+          <ul class="children" style="display: block">
+            <li><a href="general-forms.html"><i class="fa fa-caret-right"></i> 普通表单</a></li>
+            <li><a href="form-layouts.html"><i class="fa fa-caret-right"></i> 表单布局</a></li>
+            <li><a href="form-validation.html"><i class="fa fa-caret-right"></i> 表单验证</a></li>
+            <li><a href="form-wizards.html"><i class="fa fa-caret-right"></i> 表单步骤</a></li>
+            <li><a href="wysiwyg.html"><i class="fa fa-caret-right"></i> 文本编辑器</a></li>
+            <li><a href="code-editor.html"><i class="fa fa-caret-right"></i> 代码编辑器</a></li>
+            <li class="active"><a href="x-editable.html"><i class="fa fa-caret-right"></i> 实时编辑</a></li>
+          </ul>
+        </li>
+        <li class="nav-parent"><a href=""><i class="fa fa-suitcase"></i> <span>界面元素</span></a>
+          <ul class="children">
+            <li><a href="buttons.html"><i class="fa fa-caret-right"></i> 按钮</a></li>
+            <li><a href="icons.html"><span class="pull-right badge badge-danger">updated</span><i class="fa fa-caret-right"></i> 图标</a></li>
+            <li><a href="typography.html"><i class="fa fa-caret-right"></i> 排版</a></li>
+            <li><a href="alerts.html"><i class="fa fa-caret-right"></i> 提醒</a></li>
+            <li><a href="modals.html"><i class="fa fa-caret-right"></i> 模态窗口</a></li>
+            <li><a href="tabs-accordions.html"><i class="fa fa-caret-right"></i> tab标签</a></li>
+            <li><a href="sliders.html"><i class="fa fa-caret-right"></i> 滑块</a></li>
+            <li><a href="graphs.html"><i class="fa fa-caret-right"></i> 图表</a></li>
+            <li><a href="widgets.html"><i class="fa fa-caret-right"></i> 模块</a></li>
+            <li><a href="extras.html"><i class="fa fa-caret-right"></i> 其他</a></li>
+          </ul>
+        </li>
+        <li><a href="tables.html"><i class="fa fa-th-list"></i> <span>表格</span></a></li>
+        <li class="nav-parent"><a href=""><i class="fa fa-bug"></i> <span>Bug跟踪</span></a></a>
+            <ul class="children">
+                <li><a href="bug-tracker.html"><i class="fa fa-caret-right"></i> Summary</a></li>
+                <li><a href="bug-issues.html"><i class="fa fa-caret-right"></i> Issues</a></li>
+                <li><a href="view-issue.html"><i class="fa fa-caret-right"></i> View Issue</a></li>
+            </ul>
+        </li>
+        <li><a href="maps.html"><i class="fa fa-map-marker"></i> <span>地图</span></a></li>
+        <li class="nav-parent"><a href=""><i class="fa fa-file-text"></i> <span>页面</span></a>
+          <ul class="children">
+            <li><a href="calendar.html"><i class="fa fa-caret-right"></i> 日历</a></li>
+            <li><a href="media-manager.html"><i class="fa fa-caret-right"></i> 媒体管理</a></li>
+            <li><a href="timeline.html"><i class="fa fa-caret-right"></i> 时间轴</a></li>
+            <li><a href="blog-list.html"><i class="fa fa-caret-right"></i> 博客列表</a></li>
+            <li><a href="blog-single.html"><i class="fa fa-caret-right"></i> 博客单页</a></li>
+            <li><a href="people-directory.html"><i class="fa fa-caret-right"></i> 通讯录</a></li>
+            <li><a href="profile.html"><i class="fa fa-caret-right"></i> 简介</a></li>
+            <li><a href="invoice.html"><i class="fa fa-caret-right"></i> 订单页</a></li>
+            <li><a href="search-results.html"><i class="fa fa-caret-right"></i> 搜索结果</a></li>
+            <li><a href="blank.html"><i class="fa fa-caret-right"></i> 空白页</a></li>
+            <li><a href="notfound.html"><i class="fa fa-caret-right"></i> 404页面</a></li>
+            <li><a href="locked.html"><i class="fa fa-caret-right"></i> 锁屏页</a></li>
+            <li><a href="signin.html"><i class="fa fa-caret-right"></i> 登录</a></li>
+            <li><a href="signup.html"><i class="fa fa-caret-right"></i> 注册</a></li>
+          </ul>
+        </li>
+        <li class="nav-parent"><a href="layouts.html"><i class="fa fa-laptop"></i> <span>皮肤和布局</span></a>
+            <ul class="children">
+                <li><a href="layouts.html"><i class="fa fa-caret-right"></i> 普通布局</a></li>
+                <li><a href="horizontal-menu.html"><i class="fa fa-caret-right"></i> 顶部菜单</a></li>
+                <li><a href="horizontal-menu2.html"><i class="fa fa-caret-right"></i> 顶部菜单/侧边导航</a></li>
+                <li><a href="fixed-width.html"><i class="fa fa-caret-right"></i> 固定宽度页面</a></li>
+                <li><a href="fixed-width2.html"><i class="fa fa-caret-right"></i> 固定宽度菜单</a></li>
+            </ul>
+        </li>
+      </ul>
+      
+
+      
+    </div><!-- leftpanelinner -->
+  </div><!-- leftpanel -->
+  
+  <div class="mainpanel">
+    
+    <div class="headerbar">
+
+        <div class="logopanel">
+            <h1> 系统名称 </h1>
+        </div><!-- logopanel -->
+      
+      <form class="searchform" action="index.html" method="post">
+        <input type="text" class="form-control" name="keyword" placeholder="请输入关键字..." />
+      </form>
+      
+      <div class="header-right">
+        <ul class="headermenu">
+          <li>
+            <div class="btn-group">
+              <button class="btn btn-default dropdown-toggle tp-icon" data-toggle="dropdown">
+                <i class="fa fa-user"></i>
+                <span class="badge">2</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-head pull-right">
+                <h5 class="title">2个新注册用户</h5>
+                <ul class="dropdown-list user-list">
+                  <li class="new">
+                    <div class="thumb"><a href=""><img src="images/photos/user1.png" alt="" /></a></div>
+                    <div class="desc">
+                      <h5><a href="">张明阳 (@draniem)</a> <span class="badge badge-success">new</span></h5>
+                    </div>
+                  </li>
+                  <li class="new">
+                    <div class="thumb"><a href=""><img src="images/photos/user2.png" alt="" /></a></div>
+                    <div class="desc">
+                      <h5><a href="">刘泽浩</a> <span class="badge badge-success">new</span></h5>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="thumb"><a href=""><img src="images/photos/user3.png" alt="" /></a></div>
+                    <div class="desc">
+                      <h5><a href="">Weno Carasbong (@wenocar)</a></h5>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="thumb"><a href=""><img src="images/photos/user4.png" alt="" /></a></div>
+                    <div class="desc">
+                      <h5><a href="">黄晓明 (@nusja)</a></h5>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="thumb"><a href=""><img src="images/photos/user5.png" alt="" /></a></div>
+                    <div class="desc">
+                      <h5><a href="">Lane Kitmari (@lane_kitmare)</a></h5>
+                    </div>
+                  </li>
+                  <li class="new"><a href="">See All Users</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="btn-group">
+              <button class="btn btn-default dropdown-toggle tp-icon" data-toggle="dropdown">
+                <i class="fa fa-envelope"></i>
+                <span class="badge">1</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-head pull-right">
+                <h5 class="title">您有1条新消息</h5>
+                <ul class="dropdown-list gen-list">
+                  <li class="new">
+                    <a href="">
+                    <span class="thumb"><img src="images/photos/user1.png" alt="" /></span>
+                    <span class="desc">
+                      <span class="name">张明阳 <span class="badge badge-success">new</span></span>
+                      <span class="msg">这个月的报销......</span>
+                    </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                    <span class="thumb"><img src="images/photos/user2.png" alt="" /></span>
+                    <span class="desc">
+                      <span class="name">黄晓明</span>
+                      <span class="msg">这个月的报销......</span>
+                    </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                    <span class="thumb"><img src="images/photos/user3.png" alt="" /></span>
+                    <span class="desc">
+                      <span class="name">Weno Carasbong</span>
+                      <span class="msg">这个月的报销......</span>
+                    </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                    <span class="thumb"><img src="images/photos/user4.png" alt="" /></span>
+                    <span class="desc">
+                      <span class="name">Zaham Sindilmaca</span>
+                      <span class="msg">这个月的报销......</span>
+                    </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                    <span class="thumb"><img src="images/photos/user5.png" alt="" /></span>
+                    <span class="desc">
+                      <span class="name">徐静蕾</span>
+                      <span class="msg">这个月的报销......</span>
+                    </span>
+                    </a>
+                  </li>
+                  <li class="new"><a href="">查看所有消息</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="btn-group">
+              <button class="btn btn-default dropdown-toggle tp-icon" data-toggle="dropdown">
+                <i class="fa fa-globe"></i>
+                <span class="badge">5</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-head pull-right">
+                <h5 class="title">您有5条新提醒</h5>
+                <ul class="dropdown-list gen-list">
+                  <li class="new">
+                    <a href="">
+                    <span class="thumb"><img src="images/photos/user4.png" alt="" /></span>
+                    <span class="desc">
+                      <span class="name">Zaham Sindilmaca <span class="badge badge-success">new</span></span>
+                      <span class="msg">现在关注您</span>
+                    </span>
+                    </a>
+                  </li>
+                  <li class="new">
+                    <a href="">
+                    <span class="thumb"><img src="images/photos/user5.png" alt="" /></span>
+                    <span class="desc">
+                      <span class="name">Weno Carasbong <span class="badge badge-success">new</span></span>
+                      <span class="msg">现在关注您</span>
+                    </span>
+                    </a>
+                  </li>
+                  <li class="new">
+                    <a href="">
+                    <span class="thumb"><img src="images/photos/user3.png" alt="" /></span>
+                    <span class="desc">
+                      <span class="name">徐静蕾 <span class="badge badge-success">new</span></span>
+                      <span class="msg">像你现在的状态一样</span>
+                    </span>
+                    </a>
+                  </li>
+                  <li class="new">
+                    <a href="">
+                    <span class="thumb"><img src="images/photos/user3.png" alt="" /></span>
+                    <span class="desc">
+                      <span class="name">黄晓明 <span class="badge badge-success">new</span></span>
+                      <span class="msg">下载您的工作情况</span>
+                    </span>
+                    </a>
+                  </li>
+                  <li class="new">
+                    <a href="">
+                    <span class="thumb"><img src="images/photos/user3.png" alt="" /></span>
+                    <span class="desc">
+                      <span class="name">黄晓明 <span class="badge badge-success">new</span></span>
+                      <span class="msg">发送给你2条消息</span>
+                    </span>
+                    </a>
+                  </li>
+                  <li class="new"><a href="">查看所有提醒</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <img src="images/photos/loggeduser.png" alt="" />
+                系统管理员
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                <li><a href="profile.html"><i class="fa fa-user"></i> 我的帐户</a></li>
+                <li><a href="#"><i class="fa fa-cog"></i> 帐户设置</a></li>
+                <li><a href="#"><i class="fa fa-question-circle"></i> 帮助</a></li>
+                <li><a href="signin.html"><i class="fa fa-sign-out"></i> 注销</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <button id="chatview" class="btn btn-default tp-icon chat-icon">
+                <i class="fa fa-comment"></i>
+            </button>
+          </li>
+        </ul>
+      </div><!-- header-right -->
+      
+    </div><!-- headerbar -->
+        
+    <div class="pageheader">
+      <h2><i class="fa fa-pencil"></i> X-Editable <span>副标题...</span></h2>
+      <div class="breadcrumb-wrapper">
+        <span class="label">You are here:</span>
+        <ol class="breadcrumb">
+          <li><a href="index.html">Bracket</a></li>
+          <li><a href="general-forms.html">Forms</a></li>
+          <li class="active">X-Editable</li>
+        </ol>
+      </div>
+    </div>
+    
+    <div class="contentpanel">
+        
+        <div class="panel panel-default">
+            <div class="panel-body editable-list-group">
+                
+                <div class="row editable-list-item">
+                    <div class="col-sm-3">Basic popup</div>
+                    <div class="col-sm-9"><a id="basicPopup" data-type="text">themepixels</a></div>
+                </div><!-- row -->
+                
+                <div class="row editable-list-item">
+                    <div class="col-sm-3">Basic inline</div>
+                    <div class="col-sm-9"><a id="basicInline" data-type="text">themepixels</a></div>
+                </div><!-- row -->
+                
+                <div class="row editable-list-item">
+                    <div class="col-sm-3">Popup with title</div>
+                    <div class="col-sm-9"><a id="popupTitle" data-type="text">themepixels</a></div>
+                </div><!-- row -->
+                
+                <div class="row editable-list-item">
+                    <div class="col-sm-3">Empty text field, required</div>
+                    <div class="col-sm-9"><a id="emptyText" data-type="text"></a></div>
+                </div><!-- row -->
+                
+                <div class="row editable-list-item">
+                    <div class="col-sm-3">Select with no buttons</div>
+                    <div class="col-sm-9"><a id="selectNoBtns" data-value="5" data-type="select">Admin</a></div>
+                </div><!-- row -->
+                
+                <div class="row editable-list-item">
+                    <div class="col-sm-3">Combo Date (date)</div>
+                    <div class="col-sm-9"><a data-type="combodate" id="comboDate" href="#">04 / 21 / 1986</a></div>
+                </div><!-- row -->
+                
+                <div class="row editable-list-item">
+                    <div class="col-sm-3">Combo Date (datetime)</div>
+                    <div class="col-sm-9"><a data-type="combodate" id="comboDateTime" href="#">04 / 21 / 1986 10:30</a></div>
+                </div><!-- row -->
+                
+                <div class="row editable-list-item">
+                    <div class="col-sm-3">Checklist</div>
+                    <div class="col-sm-9"><a data-type="checklist" id="checkList" href="#"></a></div>
+                </div><!-- row -->
+                
+                <div class="row editable-list-item">
+                    <div class="col-sm-3">Select2 (tags mode)</div>
+                    <div class="col-sm-9">
+                        <a href="#" id="tags" data-type="select2" data-title="Enter tags">html, javascript</a>
+                    </div>
+                </div><!-- row -->
+                
+                <div class="row editable-list-item">
+                    <div class="col-sm-3">Select2 (dropdown mode)</div>
+                    <div class="col-sm-9">
+                        <a href="#" id="country" data-type="select2" data-value="BS" data-title="Select country"></a>
+                    </div>
+                </div><!-- row -->
+                
+            </div><!-- panel-body -->
+        </div><!-- panel -->
+      
+    </div><!-- contentpanel -->
+    
+  </div><!-- mainpanel -->
+  
+  <div class="rightpanel">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-justified">
+        <li class="active"><a href="#rp-alluser" data-toggle="tab"><i class="fa fa-users"></i></a></li>
+        <li><a href="#rp-favorites" data-toggle="tab"><i class="fa fa-heart"></i></a></li>
+        <li><a href="#rp-history" data-toggle="tab"><i class="fa fa-clock-o"></i></a></li>
+        <li><a href="#rp-settings" data-toggle="tab"><i class="fa fa-gear"></i></a></li>
+    </ul>
+        
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="rp-alluser">
+            <h5 class="sidebartitle">Online Users</h5>
+            <ul class="chatuserlist">
+                <li class="online">
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/userprofile.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Eileen Sideways</strong>
+                            <small>Los Angeles, CA</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li class="online">
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user1.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <span class="pull-right badge badge-danger">2</span>
+                            <strong>Zaham Sindilmaca</strong>
+                            <small>San Francisco, CA</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li class="online">
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user2.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>黄晓明</strong>
+                            <small>Bangkok, Thailand</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li class="online">
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user3.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Renov Leongal</strong>
+                            <small>Cebu City, Philippines</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li class="online">
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user4.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Weno Carasbong</strong>
+                            <small>Tokyo, Japan</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+            </ul>
+            
+            <div class="mb30"></div>
+            
+            <h5 class="sidebartitle">Offline Users</h5>
+            <ul class="chatuserlist">
+                <li>
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user5.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Eileen Sideways</strong>
+                            <small>Los Angeles, CA</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li>
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user2.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Zaham Sindilmaca</strong>
+                            <small>San Francisco, CA</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li>
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user3.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>黄晓明</strong>
+                            <small>Bangkok, Thailand</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li>
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user4.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Renov Leongal</strong>
+                            <small>Cebu City, Philippines</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li>
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user5.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Weno Carasbong</strong>
+                            <small>Tokyo, Japan</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li>
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user4.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Renov Leongal</strong>
+                            <small>Cebu City, Philippines</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li>
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user5.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Weno Carasbong</strong>
+                            <small>Tokyo, Japan</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+            </ul>
+        </div>
+        <div class="tab-pane" id="rp-favorites">
+            <h5 class="sidebartitle">Favorites</h5>
+            <ul class="chatuserlist">
+                <li class="online">
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user2.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Eileen Sideways</strong>
+                            <small>Los Angeles, CA</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li>
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user1.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Zaham Sindilmaca</strong>
+                            <small>San Francisco, CA</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li>
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user3.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>黄晓明</strong>
+                            <small>Bangkok, Thailand</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li class="online">
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user4.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Renov Leongal</strong>
+                            <small>Cebu City, Philippines</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li class="online">
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user5.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Weno Carasbong</strong>
+                            <small>Tokyo, Japan</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+            </ul>
+        </div>
+        <div class="tab-pane" id="rp-history">
+            <h5 class="sidebartitle">History</h5>
+            <ul class="chatuserlist">
+                <li class="online">
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user4.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Eileen Sideways</strong>
+                            <small>Hi hello, ctc?... would you mind if I go to your...</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li>
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user2.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>Zaham Sindilmaca</strong>
+                            <small>This is to inform you that your product that we...</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+                <li>
+                    <div class="media">
+                        <a href="#" class="pull-left media-thumb">
+                            <img alt="" src="images/photos/user3.png" class="media-object">
+                        </a>
+                        <div class="media-body">
+                            <strong>黄晓明</strong>
+                            <small>Are you willing to have a long term relat...</small>
+                        </div>
+                    </div><!-- media -->
+                </li>
+            </ul>
+        </div>
+        <div class="tab-pane pane-settings" id="rp-settings">
+            
+            <h5 class="sidebartitle mb20">Settings</h5>
+            <div class="form-group">
+                <label class="col-xs-8 control-label">Show Offline Users</label>
+                <div class="col-xs-4 control-label">
+                    <div class="toggle toggle-success"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-xs-8 control-label">Enable History</label>
+                <div class="col-xs-4 control-label">
+                    <div class="toggle toggle-success"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-xs-8 control-label">Show Full Name</label>
+                <div class="col-xs-4 control-label">
+                    <div class="toggle-chat1 toggle-success"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-xs-8 control-label">Show Location</label>
+                <div class="col-xs-4 control-label">
+                    <div class="toggle toggle-success"></div>
+                </div>
+            </div>
+            
+        </div><!-- tab-pane -->
+        
+    </div><!-- tab-content -->
+  </div><!-- rightpanel -->
+  
+</section>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/jquery.sparkline.min.js"></script>
+<script src="js/toggles.min.js"></script>
+<script src="js/retina.min.js"></script>
+<script src="js/jquery.cookies.js"></script>
+
+<script src="js/select2.min.js"></script>
+<script src="js/bootstrap-editable.min.js"></script>
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/moment.js"></script>
+
+<script src="js/custom.js"></script>
+<script>
+    jQuery(document).ready(function(){
+        
+        // Basic Popup Example
+        jQuery('#basicPopup').editable();
+        
+        // Basic Inline Example
+        jQuery('#basicInline').editable({
+            mode: 'inline'
+        });
+        
+        // Popup With Title
+        jQuery('#popupTitle').editable({
+            title: 'Enter Text'
+        });
+        
+        // Empty text field, required
+        jQuery('#emptyText').editable({
+            validate: function(value) {
+                if($.trim(value) == '') return 'This field is required';
+            }
+        });
+        
+        // Select with no buttons
+        jQuery('#selectNoBtns').editable({
+            source: [
+                     {value: "1", text: "Guest"},
+                     {value: "2", text: "Service"},
+                     {value: "3", text: "Customer"},
+                     {value: "4", text: "Operator"},
+                     {value: "5", text: "Admin"}
+                    ]
+        });
+        
+        // Combo Date
+        jQuery('#comboDate').editable({
+            inputclass: 'sel',
+            template: 'MM /DD / YYYY',
+            viewformat: 'MM / DD / YYYY'
+        });
+        
+        // Combo DateTime
+        jQuery('#comboDateTime').editable({
+            template: 'MM / DD / YYYY HH:mm',
+            viewformat: 'MM / DD / YYYY HH:mm',
+            combodate: {
+                firstItem: 'name'
+            }
+        });
+        
+        // Checklist
+        jQuery('#checkList').editable({
+            limit: 3,
+            title: 'Select Fruits',
+            source: [
+                {value: 1, text: 'banana'},
+                {value: 2, text: 'peach'},
+                {value: 3, text: 'apple'},
+                {value: 4, text: 'watermelon'},
+                {value: 5, text: 'orange'}
+            ]
+        });
+        
+        // Select 2 (tags mode)
+        jQuery('#tags').editable({
+            inputclass: 'sel-sm',
+            select2: {
+                tags: ['html', 'javascript', 'css', 'ajax'],
+                tokenSeparators: [",", " "]
+            }
+        });
+        
+        // Select 2 (dropdown mode)
+        var countries = [];
+        
+        $.each({"BD": "Bangladesh", "BE": "Belgium", "BF": "Burkina Faso", "BG": "Bulgaria", "BA": "Bosnia and Herzegovina", "BB": "Barbados", "WF": "Wallis and Futuna", "BL": "Saint Bartelemey", "BM": "Bermuda", "BN": "Brunei Darussalam", "BO": "Bolivia", "BH": "Bahrain", "BI": "Burundi", "BJ": "Benin", "BT": "Bhutan", "JM": "Jamaica", "BV": "Bouvet Island", "BW": "Botswana", "WS": "Samoa", "BR": "Brazil", "BS": "Bahamas", "JE": "Jersey", "BY": "Belarus", "O1": "Other Country", "LV": "Latvia", "RW": "Rwanda", "RS": "Serbia", "TL": "Timor-Leste", "RE": "Reunion", "LU": "Luxembourg", "TJ": "Tajikistan", "RO": "Romania", "PG": "Papua New Guinea", "GW": "Guinea-Bissau", "GU": "Guam", "GT": "Guatemala", "GS": "South Georgia and the South Sandwich Islands", "GR": "Greece", "GQ": "Equatorial Guinea", "GP": "Guadeloupe", "JP": "Japan", "GY": "Guyana", "GG": "Guernsey", "GF": "French Guiana", "GE": "Georgia", "GD": "Grenada", "GB": "United Kingdom", "GA": "Gabon", "SV": "El Salvador", "GN": "Guinea", "GM": "Gambia", "GL": "Greenland", "GI": "Gibraltar", "GH": "Ghana", "OM": "Oman", "TN": "Tunisia", "JO": "Jordan", "HR": "Croatia", "HT": "Haiti", "HU": "Hungary", "HK": "Hong Kong", "HN": "Honduras", "HM": "Heard Island and McDonald Islands", "VE": "Venezuela", "PR": "Puerto Rico", "PS": "Palestinian Territory", "PW": "Palau", "PT": "Portugal", "SJ": "Svalbard and Jan Mayen", "PY": "Paraguay", "IQ": "Iraq", "PA": "Panama", "PF": "French Polynesia", "BZ": "Belize", "PE": "Peru", "PK": "Pakistan", "PH": "Philippines", "PN": "Pitcairn", "TM": "Turkmenistan", "PL": "Poland", "PM": "Saint Pierre and Miquelon", "ZM": "Zambia", "EH": "Western Sahara", "RU": "Russian Federation", "EE": "Estonia", "EG": "Egypt", "TK": "Tokelau", "ZA": "South Africa", "EC": "Ecuador", "IT": "Italy", "VN": "Vietnam", "SB": "Solomon Islands", "EU": "Europe", "ET": "Ethiopia", "SO": "Somalia", "ZW": "Zimbabwe", "SA": "Saudi Arabia", "ES": "Spain", "ER": "Eritrea", "ME": "Montenegro", "MD": "Moldova, Republic of", "MG": "Madagascar", "MF": "Saint Martin", "MA": "Morocco", "MC": "Monaco", "UZ": "Uzbekistan", "MM": "Myanmar", "ML": "Mali", "MO": "Macao", "MN": "Mongolia", "MH": "Marshall Islands", "MK": "Macedonia", "MU": "Mauritius", "MT": "Malta", "MW": "Malawi", "MV": "Maldives", "MQ": "Martinique", "MP": "Northern Mariana Islands", "MS": "Montserrat", "MR": "Mauritania", "IM": "Isle of Man", "UG": "Uganda", "TZ": "Tanzania, United Republic of", "MY": "Malaysia", "MX": "Mexico", "IL": "Israel", "FR": "France", "IO": "British Indian Ocean Territory", "FX": "France, Metropolitan", "SH": "Saint Helena", "FI": "Finland", "FJ": "Fiji", "FK": "Falkland Islands (Malvinas)", "FM": "Micronesia, Federated States of", "FO": "Faroe Islands", "NI": "Nicaragua", "NL": "Netherlands", "NO": "Norway", "NA": "Namibia", "VU": "Vanuatu", "NC": "New Caledonia", "NE": "Niger", "NF": "Norfolk Island", "NG": "Nigeria", "NZ": "New Zealand", "NP": "Nepal", "NR": "Nauru", "NU": "Niue", "CK": "Cook Islands", "CI": "Cote d'Ivoire", "CH": "Switzerland", "CO": "Colombia", "CN": "China", "CM": "Cameroon", "CL": "Chile", "CC": "Cocos (Keeling) Islands", "CA": "Canada", "CG": "Congo", "CF": "Central African Republic", "CD": "Congo, The Democratic Republic of the", "CZ": "Czech Republic", "CY": "Cyprus", "CX": "Christmas Island", "CR": "Costa Rica", "CV": "Cape Verde", "CU": "Cuba", "SZ": "Swaziland", "SY": "Syrian Arab Republic", "KG": "Kyrgyzstan", "KE": "Kenya", "SR": "Suriname", "KI": "Kiribati", "KH": "Cambodia", "KN": "Saint Kitts and Nevis", "KM": "Comoros", "ST": "Sao Tome and Principe", "SK": "Slovakia", "KR": "Korea, Republic of", "SI": "Slovenia", "KP": "Korea, Democratic People's Republic of", "KW": "Kuwait", "SN": "Senegal", "SM": "San Marino", "SL": "Sierra Leone", "SC": "Seychelles", "KZ": "Kazakhstan", "KY": "Cayman Islands", "SG": "Singapore", "SE": "Sweden", "SD": "Sudan", "DO": "Dominican Republic", "DM": "Dominica", "DJ": "Djibouti", "DK": "Denmark", "VG": "Virgin Islands, British", "DE": "Germany", "YE": "Yemen", "DZ": "Algeria", "US": "United States", "UY": "Uruguay", "YT": "Mayotte", "UM": "United States Minor Outlying Islands", "LB": "Lebanon", "LC": "Saint Lucia", "LA": "Lao People's Democratic Republic", "TV": "Tuvalu", "TW": "Taiwan", "TT": "Trinidad and Tobago", "TR": "Turkey", "LK": "Sri Lanka", "LI": "Liechtenstein", "A1": "Anonymous Proxy", "TO": "Tonga", "LT": "Lithuania", "A2": "Satellite Provider", "LR": "Liberia", "LS": "Lesotho", "TH": "Thailand", "TF": "French Southern Territories", "TG": "Togo", "TD": "Chad", "TC": "Turks and Caicos Islands", "LY": "Libyan Arab Jamahiriya", "VA": "Holy See (Vatican City State)", "VC": "Saint Vincent and the Grenadines", "AE": "United Arab Emirates", "AD": "Andorra", "AG": "Antigua and Barbuda", "AF": "Afghanistan", "AI": "Anguilla", "VI": "Virgin Islands, U.S.", "IS": "Iceland", "IR": "Iran, Islamic Republic of", "AM": "Armenia", "AL": "Albania", "AO": "Angola", "AN": "Netherlands Antilles", "AQ": "Antarctica", "AP": "Asia/Pacific Region", "AS": "American Samoa", "AR": "Argentina", "AU": "Australia", "AT": "Austria", "AW": "Aruba", "IN": "India", "AX": "Aland Islands", "AZ": "Azerbaijan", "IE": "Ireland", "ID": "Indonesia", "UA": "Ukraine", "QA": "Qatar", "MZ": "Mozambique"}, function(k, v) {
+            countries.push({id: k, text: v});
+        });
+        
+        jQuery('#country').editable({
+            inputclass: 'sel-xs',
+            source: countries,
+            select2: {
+                width: 200,
+                placeholder: 'Select country',
+                allowClear: true
+            } 
+        });
+        
+    });
+</script>
+
+
+</body>
+</html>

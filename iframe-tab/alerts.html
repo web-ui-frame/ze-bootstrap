@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="zh" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+    <title>管理系统</title>
+
+    <!-- ======基础样式开始======-->
+    <link href="css/bootstrap/style.default.css" rel="stylesheet">
+    <!--换肤-->
+    <link href="css/bootstrap/style.katniss.css" rel="stylesheet">
+    <!--IE8兼容样式-->
+    <link href="css/bootstrap/navigateLowerIE8.css" rel="stylesheet">
+    <!-- ======基础样式结束======-->
+    <link href="js/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/bootstrap/html5shiv.js"></script>
+    <script src="js/bootstrap/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="stickyheader">
+<div class="contentpanel">
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-btns">
+                        <a href="" class="panel-close">&times;</a>
+                        <a href="" class="minimize">&minus;</a>
+                    </div>
+                    <!-- panel-btns -->
+                    <h4 class="panel-title">模态窗口</h4>
+
+                    <p>这个只是演示iframe内的调用，父级窗口调用请参考单独的弹窗演示。</p>
+                </div>
+                <!-- panel-heading -->
+                <div class="panel-body">
+
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-primary btn-lg mb10" data-toggle="modal" data-target="#myModal">
+                        打开模态窗
+                    </button>
+                    <p>You can view more examples in using modals in <a href="modals.html">here</a></p>
+                </div>
+            </div>
+            <!-- panel -->
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-btns">
+                        <a href="" class="panel-close">&times;</a>
+                        <a href="" class="minimize">&minus;</a>
+                    </div>
+                    <!-- panel-btns -->
+                    <h4 class="panel-title">提示</h4>
+
+                    <p>鼠标提示，在鼠标移动到某个按钮上可以出现相关的提示信息。</p>
+                </div>
+                <!-- panel-heading -->
+                <div class="panel-body">
+
+                    <div class="tooltip-example">
+                        <button title="Tooltip on right" data-placement="right" data-toggle="tooltip"
+                                class="btn btn-default tooltips" type="button">Tooltip Right
+                        </button>
+                        <button title="" data-placement="left" data-toggle="tooltip" class="btn btn-default tooltips"
+                                type="button" data-original-title="Tooltip on left">Tooltip Left
+                        </button>
+                        <button title="Tooltip on top" data-placement="top" data-toggle="tooltip"
+                                class="btn btn-default tooltips" type="button">Tooltip Top
+                        </button>
+                        <button title="Tooltip on bottom" data-placement="bottom" data-toggle="tooltip"
+                                class="btn btn-default tooltips" type="button">Tooltip Bottom
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- panel -->
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-btns">
+                        <a href="" class="panel-close">&times;</a>
+                        <a href="" class="minimize">&minus;</a>
+                    </div>
+                    <!-- panel-btns -->
+                    <h4 class="panel-title">Popovers</h4>
+
+                    <p>Add small overlays of content, like those on the iPad, to any element for housing secondary
+                        information.</p>
+                </div>
+                <!-- panel-heading -->
+                <div class="panel-body">
+
+                    <div class="popover-example">
+                        <button data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                data-placement="left" data-toggle="popover" data-container="body"
+                                class="btn btn-default popovers" type="button" data-original-title="" title="">
+                            Popover Left
+                        </button>
+                        <button data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                data-placement="top" data-toggle="popover" data-container="body"
+                                class="btn btn-default popovers" type="button" data-original-title="" title="">
+                            Popover Top
+                        </button>
+                        <button data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                data-placement="bottom" data-toggle="popover" data-container="body"
+                                class="btn btn-default popovers" type="button" data-original-title="" title="">
+                            Popover Bottom
+                        </button>
+                        <button data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                                data-placement="right" data-toggle="popover" data-container="body"
+                                class="btn btn-default popovers" type="button" data-original-title="" title="">
+                            Popover Right
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- panel -->
+
+        </div>
+        <!-- col-md-6 -->
+
+        <div class="col-md-6">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-btns">
+                        <a href="" class="panel-close">&times;</a>
+                        <a href="" class="minimize">&minus;</a>
+                    </div>
+                    <!-- panel-btns -->
+                    <h4 class="panel-title">提示信息</h4>
+
+                    <p>Provide contextual feedback messages for typical user actions with the handful of available and
+                        flexible alert messages.</p>
+                </div>
+                <!-- panel-heading -->
+                <div class="panel-body">
+
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>成功!</strong> 您的信息以及提交成功！</a>.
+                    </div>
+
+                    <div class="alert alert-info">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>提示信息!</strong> This <a href="" class="alert-link">alert needs your attention</a>,
+                        but it's not super important.
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>警告!</strong>你访问的页面 <a href="" class="alert-link">不存在</a>.
+                    </div>
+
+                    <div class="alert alert-danger">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>严重!</strong> Change a <a href="" class="alert-link">few things</a> up and try
+                        submitting again.
+                    </div>
+
+                    <div class="alert alert-info fade in nomargin">
+                        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">&times;</button>
+                        <h4>通知!</h4>
+
+                        <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor
+                            ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet
+                            fermentum.</p>
+
+                        <p>
+                            <button class="btn btn-info" type="button">知道了</button>
+                            <button class="btn btn-white" type="button">关闭</button>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- panel -->
+
+        </div>
+        <!-- col-md-6 -->
+
+    </div>
+    <!-- row -->
+
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-btns">
+                        <a href="" class="panel-close">&times;</a>
+                        <a href="" class="minimize">&minus;</a>
+                    </div>
+                    <!-- panel-btns -->
+                    <h4 class="panel-title">Growl Notifications</h4>
+
+                    <p>Growl is a jQuery plugin designed to provide informative messages in the browser.</p>
+                </div>
+                <!-- panel-heading -->
+                <div class="panel-body">
+                    <a href="" class="btn btn-default mr5" id="growl1">Growl With Image</a>
+                    <a href="" class="btn btn-default" id="growl2">Growl Without Image</a>
+
+                    <div class="mb10"></div>
+
+                    <a href="" class="btn btn-primary mr5 mb10" id="growl-primary">Primary</a>
+                    <a href="" class="btn btn-success mr5 mb10" id="growl-success">Success</a>
+                    <a href="" class="btn btn-warning mr5 mb10" id="growl-warning">Warning</a>
+                    <a href="" class="btn btn-danger mr5 mb10" id="growl-danger">Danger</a>
+                    <a href="" class="btn btn-info mb10" id="growl-info">Info</a>
+
+                </div>
+            </div>
+            <!-- panel -->
+
+        </div>
+        <!-- col-md-6 -->
+
+        <div class="col-md-6">
+
+            &nbsp;
+
+        </div>
+        <!-- col-md-6 -->
+
+    </div>
+    <!-- row -->
+
+</div>
+<!-- contentpanel --><!-- mainpanel -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">模态窗标题</h4>
+            </div>
+            <div class="modal-body">
+                内容发在这里...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+        <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+</div>
+<!-- modal -->
+<script src="js/bootstrap/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/bootstrap/modernizr.min.js"></script>
+<script src="js/bootstrap/retina.min.js"></script>
+<script src="js/bootstrap/custom.js"></script>
+<!--右侧页面公用js开始-->
+<script src="js/util/util.js"></script>
+<!--右侧页面公用js结束-->
+<!--当前页引用js开始-->
+<script src="js/gritter/jquery.gritter.min.js"></script>
+
+<script>
+    jQuery(document).ready(function () {
+
+        "use strict";
+        // Tooltip
+        jQuery('.tooltips').tooltip({container: 'body'});
+
+        // Popover
+        jQuery('.popovers').popover();
+
+        jQuery('#growl1').click(function () {
+
+            jQuery.gritter.add({
+                // (string | mandatory) the heading of the notification
+                title: '这是一个常规提示!',
+                // (string | mandatory) the text inside the notification
+                text: '这个提示框会在一段时间后自动消失。',
+                // (string | optional) the image to display on the left
+                image: 'images/photos/loggeduser.png',
+                // (bool | optional) if you want it to fade out on its own or just sit there
+                sticky: false,
+                // (int | optional) the time you want it to be alive for before fading out
+                time: ''
+            });
+
+            return false;
+
+        });
+
+        jQuery('#growl2').click(function () {
+            jQuery.gritter.add({
+                title: '这是一个常规提示!',
+                text: '这个提示框会在一段时间后自动消失。',
+                sticky: false,
+                time: ''
+            });
+            return false;
+        });
+
+        jQuery('#growl-primary').click(function () {
+            jQuery.gritter.add({
+                title: '这是一个常规提示!',
+                text: '这个提示框会在一段时间后自动消失。',
+                class_name: 'growl-primary',
+                image: 'images/screen.png',
+                sticky: false,
+                time: ''
+            });
+            return false;
+        });
+
+        jQuery('#growl-success').click(function () {
+            jQuery.gritter.add({
+                title: '这是一个常规提示!',
+                text: '这个提示框会在一段时间后自动消失。',
+                class_name: 'growl-success',
+                image: 'images/screen.png',
+                sticky: false,
+                time: ''
+            });
+            return false;
+        });
+
+        jQuery('#growl-warning').click(function () {
+            jQuery.gritter.add({
+                title: '这是一个常规提示!',
+                text: '这个提示会自动消失。',
+                class_name: 'growl-warning',
+                image: 'images/screen.png',
+                sticky: false,
+                time: ''
+            });
+            return false;
+        });
+
+        jQuery('#growl-danger').click(function () {
+            jQuery.gritter.add({
+                title: '这是一个常规提示!',
+                text: '这个提示框会在一段时间后自动消失。',
+                class_name: 'growl-danger',
+                image: 'images/screen.png',
+                sticky: false,
+                time: ''
+            });
+            return false;
+        });
+
+        jQuery('#growl-info').click(function () {
+            jQuery.gritter.add({
+                title: '这是一个常规提示!',
+                text: '这个提示框会在一段时间后自动消失。',
+                class_name: 'growl-info',
+                image: 'images/screen.png',
+                sticky: false,
+                time: ''
+            });
+            return false;
+        });
+
+    });
+</script>
+
+</body>
+</html>

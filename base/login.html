@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="zh" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>海尔不良品换货系统</title>
+
+    <!-- ======基础样式开始======-->
+    <link href="css/style.default.css" rel="stylesheet">
+    <!--换肤-->
+    <link href="css/style.katniss.css" rel="stylesheet">
+    <!--IE8兼容样式-->
+    <link href="css/navigateLowerIE8.css" rel="stylesheet">
+    <!-- ======基础样式结束======-->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="signin">
+
+
+<section>
+  
+    <div class="signinpanel">
+        
+        <div class="row">
+            
+            <div class="col-md-7">
+                
+                <div class="signin-info">
+                    <div class="logopanel">
+                        <h1> 海尔终端营销管理系统 </h1>
+                    </div><!-- logopanel -->
+                
+                    <div class="mb20"></div>
+                
+                    <h5><strong>欢迎登录海尔终端营销管理系统</strong></h5>
+                    <ul>
+                        <li><i class="fa fa-arrow-circle-o-right mr5"></i> 活动管理</li>
+                        <li><i class="fa fa-arrow-circle-o-right mr5"></i> 媒体管理</li>
+                        <li><i class="fa fa-arrow-circle-o-right mr5"></i> 系统管理</li>
+                        <li><i class="fa fa-arrow-circle-o-right mr5"></i> 网媒管理</li>
+                        <li><i class="fa fa-arrow-circle-o-right mr5"></i> 纸媒管理</li>
+                        <li><i class="fa fa-arrow-circle-o-right mr5"></i> 电台排期管理</li>
+                    </ul>
+                </div><!-- signin0-info -->
+            
+            </div><!-- col-sm-7 -->
+            
+            <div class="col-md-5">
+                
+                <form method="post" action="order.html">
+                    <h4 class="nomargin">登录</h4>
+                    <p class="mt5 mb20">请输入您的帐号密码登录。</p>
+                
+                    <input type="text" class="form-control uname" placeholder="用户名" />
+                    <input type="password" class="form-control pword" placeholder="密码" />
+                    <a href=""><small>忘记密码？</small></a>
+                    <button class="btn btn-success btn-block">登录</button>
+                    
+                </form>
+            </div><!-- col-sm-5 -->
+            
+        </div><!-- row -->
+        
+        <div class="signup-footer">
+            <div class="pull-left">
+                &copy; 2015. 版权所有 Haier
+            </div>
+            <div class="pull-right">
+                技术支持： <a href="#" target="_blank">Haier</a>
+            </div>
+        </div>
+        
+    </div><!-- signin -->
+  
+</section>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/jquery.sparkline.min.js"></script>
+<script src="js/jquery.cookies.js"></script>
+
+<script src="js/toggles.min.js"></script>
+<script src="js/retina.min.js"></script>
+
+<script src="js/custom.js"></script>
+<script>
+    jQuery(document).ready(function(){
+        
+        // Please do not use the code below
+        // This is for demo purposes only
+        var c = jQuery.cookie('change-skin');
+        if (c && c == 'greyjoy') {
+            jQuery('.btn-success').addClass('btn-orange').removeClass('btn-success');
+        } else if(c && c == 'dodgerblue') {
+            jQuery('.btn-success').addClass('btn-primary').removeClass('btn-success');
+        } else if (c && c == 'katniss') {
+            jQuery('.btn-success').addClass('btn-primary').removeClass('btn-success');
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="zh" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>管理系统</title>
+    <!-- ======基础样式开始======-->
+    <link href="css/bootstrap/style.default.css" rel="stylesheet">
+    <!--换肤-->
+    <link href="css/bootstrap/style.katniss.css" rel="stylesheet">
+    <!--IE8兼容样式-->
+    <link href="css/bootstrap/navigateLowerIE8.css" rel="stylesheet">
+    <!-- ======基础样式结束======-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/bootstrap/html5shiv.js"></script>
+    <script src="js/bootstrap/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="contentpanel">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns">
+                <a href="" class="panel-close">&times;</a>
+                <a href="" class="minimize">&minus;</a>
+            </div>
+            <!-- panel-btns -->
+            <h4 class="panel-title">自动补全</h4>
+
+            <p> 请尝试输入以下数据ActionScript", "AppleScript", "中国", "中间", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme" </p>
+        </div>
+        <!-- panel-heading -->
+        <div class="panel-body">
+            <input type="text" class="form-control" id="tags"/>
+        </div>
+    </div>
+    <!-- panel -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns"><a href="#" class="minimize">−</a></div>
+            <h4 class="panel-title">使用方法</h4>
+        </div>
+        <div class="panel-body">
+            <STRONG>1、jquery.autocomplete参考地址</STRONG> <BR>
+            http://bassistance.de/jquery-plugins/jquery-plugin-autocomplete/ <BR>
+            http://docs.jquery.com/Plugins/Autocomplete <BR>
+            <STRONG>2、jquery.autocomplete详解 <BR>
+            </STRONG>语法： <BR>autocomplete(urlor data, [options] ) <BR>
+            参数： <BR>
+            url or data：数组或者url <BR>[options]：可选项，选项解释如下： <BR>
+            1) minChars (Number) <BR>
+            在触发autoComplete前用户至少需要输入的字符数，Default:1，如果设为0，在输入框内双击或者删除输入框内内容时显示列表。 <BR>
+            2) width (Number) <BR>指定下拉框的宽度，Default: input元素的宽度 <BR>
+            3) max (Number) <BR>
+            autoComplete下拉显示项目的个数，Default: 10 <BR>
+            4) delay (Number) <BR>
+            击键后激活autoComplete的延迟时间(单位毫秒)，Default: 远程为400 本地10 <BR>
+            5) autoFill (Boolean) <BR>要不要在用户选择时自动将用户当前鼠标所在的值填入到input框，Default: false <BR>
+            6) mustMatch (Booolean) <BR>如果设置为true，autoComplete只会允许匹配的结果出现在输入框,所有当用户输入的是非法字符时将会得不到下拉框，Default:false <BR>
+            7) matchContains (Boolean) <BR>决定比较时是否要在字符串内部查看匹配，如ba是否与foo bar中的ba匹配.使用缓存时比较重要.不要和autofill混用.Default: false
+            <BR>
+            8) selectFirst (Boolean) <BR>如果设置成true,在用户键入tab或return键时autoComplete下拉列表的第一个值将被自动选择,尽管它没被手工选中(用键盘或鼠标).当然如果用户选中某个项目,那么就用用户选中的值.
+            Default: true <BR>
+            9) cacheLength (Number) <BR>缓存的长度.即对从数据库中取到的结果集要缓存多少条记录.设成1为不缓存.Default: 10 <BR>
+            10) matchSubset (Boolean) <BR>autoComplete可不可以使用对服务器查询的缓存,如果缓存对foo的查询结果,那么如果用户输入foo就不需要再进行检索了,直接使用缓存.通常是打开这个选项以减轻服务器的负担以提高性能.只会在缓存长度大于1时有效.Default:
+            true <BR>
+            11) matchCase (Boolean) <BR>比较是否开启大小写敏感开关.使用缓存时比较重要.如果你理解上一个选项,这个也就不难理解,就好比foot要不要到FOO的缓存中去找.Default: false
+            <BR>
+            12) multiple (Boolean) <BR>是否允许输入多个值即多次使用autoComplete以输入多个值. Default:false <BR>
+            13) multipleSeparator (String) <BR>如果是多选时,用来分开各个选择的字符. Default:"," <BR>
+            14) scroll (Boolean) <BR>当结果集大于默认高度时是否使用卷轴显示 Default: true <BR>
+            15) scrollHeight (Number) <BR>自动完成提示的卷轴高度用像素大小表示 Default: 180 <BR>
+            16) formatItem (Function) <BR>为每个要显示的项目使用高级标签.即对结果中的每一行都会调用这个函数,返回值将用LI元素包含显示在下拉列表中.Autocompleter会提供三个参数(row,
+            i, max): 返回的结果数组, 当前处理的行数(即第几个项目,是从1开始的自然数), 当前结果数组元素的个数即项目的个数.Default: none,
+            表示不指定自定义的处理函数,这样下拉列表中的每一行只包含一个值. <BR>
+            17) formatResult (Function) <BR>和formatItem类似,但可以将将要输入到input文本框内的值进行格式化.同样有三个参数,和formatItem一样.Default:
+            none,表示要么是只有数据,要么是使用formatItem提供的值. <BR>
+            18) formatMatch (Function) <BR>对每一行数据使用此函数格式化需要查询的数据格式. 返回值是给内部搜索算法使用的. 参数值row <BR>
+            19) extraParams (Object) <BR>为后台(一般是服务端的脚本)提供更多的参数.和通常的作法一样是使用一个键值对对象.如果传过去的值是{ bar:4
+            },将会被autocompleter解析成my_autocomplete_backend.php?q=foo&bar=4 (假设当前用户输入了foo). Default: {} <BR>
+            20) result (handler) Returns:jQuery <BR>
+            此事件会在用户选中某一项后触发，参数为： <BR>
+            event: 事件对象. event.type为result. <BR>
+            data: 选中的数据行. <BR>formatted:formatResult函数返回的值 <BR>例如： <BR>$("#singleBirdRemote").result(function(event,
+            data, formatted){ <BR>//如选择后给其他控件赋值，触发别的事件等等 <BR>}); <BR><STRONG>3、jquery.autocomplete使用技巧</STRONG> <BR>1)
+            jquery.autocomplete需要的数据源可以为：本地数据和远程数据 <BR>本地数据源为本地js数组或本地的json对象，如： <BR>var data = ["c++","java", "php",
+            "coldfusion","javascript"]; <BR>var data = [{text:'Link A', url:'/page1'}, {text:'Link B', url: '/page2'} ];
+            <BR>在使用远程地址时，它默认传入的参数是：q（输入值），limit（返回结果的最大值），可以使用extraParams传入其他的参数，而且远程数据源是需要固定格式的数据，返回结果：使用“\n”分割每行数据，每行数据中使用“|”分割每个元素，如：
+            <BR>后台C＃代码： <BR>
+
+            <div class="codetitle"> 代码如下:
+            </div>
+            <div class="panel-default p-10"><code id="code52756"><BR>string data = "c++\n java \n php \n coldfusion \n javascript"; <BR>string
+                data = "{text:'LinkA', url:'/page1'} \n {text:'Link B', url: '/page2'} "; <BR></code></div>
+            <BR><STRONG>4、jquery.autocomplete实例</STRONG> <BR>1) 本地数据源的调用方法 <BR>方法1： <BR>
+
+            <code class="codetitle"> 代码如下:
+            </code>
+            <div class="panel-default p-10"><code id="code44470"><BR>$("#tags").autocomplete(["c++","java", "php",
+                "coldfusion","javascript"], { <BR>width: 320, <BR>max: 4, <BR>highlight: false, <BR>multiple: true, <BR>multipleSeparator:
+                "", <BR>scroll: true, <BR>scrollHeight: 300 <BR>}); <BR></code></div>
+            <BR>方法2： <BR>
+
+            <div class="codetitle"> 代码如下:
+            </div>
+            <div class="panel-default p-10"><code id="code22444"><BR>var data = [{text:'Link A', url:'/page1'}, {text:'Link B', url:
+                '/page2'} ]; <BR>$("...").autocomplete(data,{ <BR>formatItem: function(item) { <BR>return item.text;
+                <BR>} <BR>}).result(function(event,item) { <BR>location.href = item.url; <BR>}); <BR></code></div>
+            <BR>2) 远程数据数据源的调用方法 <BR>方法1： <BR>前台js <BR>
+
+            <div class="codetitle"> 代码如下:
+            </div>
+            <div class="panel-default p-10"><code id="code61965"><BR>&lt;scripttype="text/javascript"&gt; <BR>$(document).ready(function()
+                { <BR>$("#Login").focus().autocomplete("/ajax/Account", { <BR>formatItem: function(row, i,max) { <BR>var
+                obj =eval("(" + row + ")"); //转换成js对象 <BR>return obj.Text; <BR>}, <BR>formatResult: function(row) { <BR>var
+                obj =eval("(" + row + ")"); //转换成js对象 <BR>return obj.Text; <BR>} <BR>}).result(function(event, item) {
+                <BR>var obj = eval("(" +item + ")"); //转换成js对象 <BR>$("#link").attr(“href”,obj.url); <BR>}); <BR>}); <BR>&lt;/script&gt;
+                <BR></code></div>
+            <BR><STRONG>后台C#（mvc）代码： <BR></STRONG>
+
+            <div class="codetitle"> 代码如下:
+            </div>
+            <div class="panel-default p-10"><code id="code43402"><BR>public ContentResult GetUserAccount(string q) <BR>{ <BR>string
+                strResult = ""; <BR>//...查询数据操作... <BR>//...格式化数据... <BR>//格式完成的结果为 <BR>strResult = "{text:'Link A',
+                url:'/page1'}\n {text:'Link B', url: '/page2'} "; <BR>return Content(strResult); <BR>} <BR></code></div>
+            <BR>方法2： <BR>前台js <BR>
+
+            <div class="codetitle"> 代码如下:
+            </div>
+            <div class="panel-default p-10"><code id="code25649"><BR>&lt;scripttype="text/javascript"&gt; <BR>$(document).ready(function()
+                { <BR>$.getJSON("/ajax/Account",function(data) { <BR>$("#Login").focus().autocomplete(data, { <BR>formatItem:
+                function(item,i, max) { <BR>return item.Text; <BR>}, <BR>formatResult:function(item) { <BR>return
+                item.Text; <BR>} <BR>}).result(function(event, item){ <BR>$("#link").attr(“href”,item.url); <BR>}); <BR>});
+                <BR>}); <BR>&lt;/script&gt;<BR></code></div>
+            <BR><STRONG>后台C#（mvc）代码： <BR></STRONG>
+
+            <div class="codetitle"> 代码如下:
+            </div>
+            <div class="panel-default p-10"><code  id="code52352"><BR>publicContentResult Account(string q) <BR>{ <BR>string strResult =
+                ""; <BR>//...查询数据操作... <BR>//...格式化数据... <BR>//格式完成的结果为 <BR>strResult = "[{\"text\":\"LinkA\",
+                \"url\":\"/page1\"}, {\"text\":\"LinkB\", \"url\": \"/page2\"} ]"; <BR>return Content(strResult); <BR>}
+                <BR>
+            </code></div>
+        </div>
+    </div>
+</div>
+    <script src="js/bootstrap/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/bootstrap/modernizr.min.js"></script>
+    <script src="js/bootstrap/retina.min.js"></script>
+    <script src="js/util/util.js"></script>
+    <script src="js/bootstrap-autocomplete/bootstrap.autocomplete.js"></script>
+    <script>
+        // Autocomplete
+        var availableTags = ["ActionScript", "AppleScript", "中国", "中间", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
+
+        $("#tags").autocomplete({
+            source: availableTags
+        });
+    </script>
+</body>
+</html>

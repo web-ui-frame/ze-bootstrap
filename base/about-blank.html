@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="zh" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+    <title>管理系统</title>
+
+    <title>终端营销活动管理系统</title>
+    <!-- ======基础样式开始======-->
+    <link href="css/style.default.css" rel="stylesheet">
+    <!--换肤-->
+    <link href="css/style.katniss.css" rel="stylesheet">
+    <!--IE8兼容样式-->
+    <link href="css/navigateLowerIE8.css" rel="stylesheet">
+    <!-- ======基础样式结束======-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body class="stickyheader leftpanel-collapsed" style="overflow: visible;" id="bd">
+     <!--Preloader-->
+    <div id="preloader">
+        <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
+    </div>
+
+    <section>
+
+        <div class="leftpanel">
+            <div class="leftpanelinner">
+
+                <!-- This is only visible to small devices -->
+                <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                    <div class="media userlogged">
+                        <img alt="" src="images/photos/loggeduser.png" class="media-object">
+                        <div class="media-body">
+                            <h4>系统管理员</h4>
+                            <span>"欢迎登录管理系统"</span>
+                        </div>
+                    </div>
+
+                    <h5 class="sidebartitle actitle">账户</h5>
+                    <ul class="nav nav-pills nav-stacked nav-bracket mb30">
+                        <li><a href="profile.html"><i class="fa fa-user"></i><span>账户资料</span></a></li>
+                        <li><a href=""><i class="fa fa-cog"></i><span>账户设置</span></a></li>
+                        <li><a href=""><i class="fa fa-question-circle"></i><span>帮助</span></a></li>
+                        <li><a href="signout.html"><i class="fa fa-sign-out"></i><span>注销</span></a></li>
+                    </ul>
+                </div>
+
+                <h5 class="sidebartitle">菜单</h5>
+                <ul class="nav nav-pills nav-stacked nav-bracket">
+                    <li class="active"><a href="index-demo1.html"><i class="fa fa-home"></i><span>主页</span></a></li>
+                    <li class="nav-parent"><a href="javascript:;"><i class="fa fa-edit"></i><span>活动管理</span></a>
+                        <ul class="children">
+                            <li><a href="index-demo2.html"><i class="fa fa-caret-right"></i>活动排期</a></li>
+                            <li><a href="index-demo4.html"><i class="fa fa-caret-right"></i>活动排期审核管理</a></li>
+                            <li><a href="index-demo5.html"><i class="fa fa-caret-right"></i>活动执行</a></li>
+                            <li><a href="index-demo6.html"><i class="fa fa-caret-right"></i>排期申请修改管理</a></li>
+                            <li><a href="index-demo7.html"><i class="fa fa-caret-right"></i>活动图片</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-parent"><a href="javascript:;"><i class="fa fa-paper-plane"></i><span>媒体管理</span></a>
+                        <ul class="children">
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>网媒管理</a></li>
+                            <li><a href="index-demo1.html"><span class="pull-right badge badge-danger">10</span><i class="fa fa-caret-right"></i> 报纸排期管理</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>电台排期管理</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>刷墙分布管理</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>车体管理</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>广告位管理</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>新闻论坛管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-parent"><a href="javascript:;"><i class="fa fa-institution"></i><span>创客竞技场</span></a>
+                        <ul class="children">
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>进入竞技场</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>竞技场管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-parent"><a href="javascript:;"><i class="fa fa-flag"></i><span>创客样板库</span></a>
+                        <ul class="children">
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>进入样板库</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>样板库管理</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-parent"><a href="javascript:;"><i class="fa fa-cog"></i><span>系统管理</span></a>
+                        <ul class="children">
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>基础数据管理</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>首页banner管理</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>资源管理</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>Form角色管理</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>职位管理</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>活动提报时效设置</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>活动预警规划管理</a></li>
+                            <li><a href="index-demo1.html"><i class="fa fa-caret-right"></i>活动审核节点设置</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+            </div>
+            <!-- leftpanelinner -->
+        </div>
+        <!-- leftpanel -->
+
+        <div class="mainpanel">
+
+            <div class="headerbar">
+                <div class="logopanel">
+                    <h1> 系统名称 </h1>
+                </div>
+                <!-- logopanel -->
+                <div class="sys-name">
+                    <img src="images/haier-logo.png" class="hidden-xs" />
+                    终端营销
+           <span class="hidden-xs">活动管理系统</span>
+                </div>
+                <!--<form class="searchform" action="index.html" method="post">
+        <input type="text" class="form-control" name="keyword" placeholder="请输入关键字..." />
+      </form>-->
+
+                <div class="header-right">
+                    <ul class="headermenu">
+                        <li>
+                            <div class="btn-group">
+                                <button class="btn btn-default dropdown-toggle tp-icon" data-toggle="dropdown">
+                                    <i class="fa  fa-comments"></i>
+                                    <span class="badge">2</span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-head pull-right">
+                                    <h5 class="title"><b>意见反馈</b></h5>
+                                    <ul class="dropdown-list user-list">
+                                        <li class="new">
+                                            <div class="desc">
+                                                <h5><a href="">咨询类消息...</a> <span class="badge badge-success">2015-2-3</span></h5>
+                                            </div>
+                                        </li>
+                                        <li class="new">
+                                            <div class="desc">
+                                                <h5><a href="">咨询类消息...</a> <span class="badge badge-success">2015-2-3</span></h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="desc">
+                                                <h5><a href="">咨询类消息...</a> <span class="badge badge-success">2015-2-3</span></h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="desc">
+                                                <h5><a href="">咨询类消息...</a> <span class="badge badge-success">2015-2-3</span></h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="desc">
+                                                <h5><a href="">咨询类消息...</a> <span class="badge badge-success">2015-2-3</span></h5>
+                                            </div>
+                                        </li>
+                                        <li class="new"><a href="">查看所有反馈</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="btn-group">
+                                <button class="btn btn-default dropdown-toggle tp-icon" data-toggle="dropdown">
+                                    <i class="fa fa-tasks"></i>
+                                    <span class="badge">1</span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-head pull-right">
+                                    <h5 class="title"><b>待办任务</b></h5>
+                                    <ul class="dropdown-list gen-list">
+                                        <li class="new">
+                                            <a href="">
+                                                <span class="desc">
+                                                    <span class="name">媒体排期提报 <span class="badge badge-success">new</span></span>
+                                                    <span class="msg">媒体排期最后截止日期2015-2-3...</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="desc">
+                                                    <span class="name">媒体排期提报 <span class="badge badge-success">new</span></span>
+                                                    <span class="msg">媒体排期最后截止日期2015-2-3...</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="desc">
+                                                    <span class="name">媒体排期提报 <span class="badge badge-success">new</span></span>
+                                                    <span class="msg">媒体排期最后截止日期2015-2-3...</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="desc">
+                                                    <span class="name">媒体排期提报 <span class="badge badge-success">new</span></span>
+                                                    <span class="msg">媒体排期最后截止日期2015-2-3...</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <span class="desc">
+                                                    <span class="name">媒体排期提报 <span class="badge badge-success">new</span></span>
+                                                    <span class="msg">媒体排期最后截止日期2015-2-3...</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="new"><a href="">查看所有任务</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="btn-group">
+                                <button class="btn btn-default dropdown-toggle tp-icon" data-toggle="dropdown">
+                                    <i class="fa  fa-envelope"></i>
+                                    <span class="badge">5</span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-head pull-right">
+                                    <h5 class="title"><b>系统消息</b></h5>
+                                    <ul class="dropdown-list gen-list">
+                                        <li class="new">
+                                            <a href="">
+                                                <span class="desc">
+                                                    <span class="name">Zaham Sindilmaca <span class="badge badge-success">new</span></span>
+                                                    <span class="msg">现在关注您</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="new">
+                                            <a href="">
+                                                <span class="desc">
+                                                    <span class="name">Weno Carasbong <span class="badge badge-success">new</span></span>
+                                                    <span class="msg">现在关注您</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="new">
+                                            <a href="">
+                                                <span class="desc">
+                                                    <span class="name">徐静蕾 <span class="badge badge-success">new</span></span>
+                                                    <span class="msg">像你现在的状态一样</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="new">
+                                            <a href="">
+                                                <span class="desc">
+                                                    <span class="name">黄晓明 <span class="badge badge-success">new</span></span>
+                                                    <span class="msg">下载您的工作情况</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="new">
+                                            <a href="">
+                                                <span class="desc">
+                                                    <span class="name">黄晓明 <span class="badge badge-success">new</span></span>
+                                                    <span class="msg">发送给你2条消息</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="new"><a href="">查看所有提醒</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <img src="images/photos/loggeduser.png" alt="" />
+                                    系统管理员
+                <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                                    <li><a href="profile.html"><i class="fa fa-user"></i>个人资料</a></li>
+                                    <li><a href="#"><i class="fa fa-cog"></i>账户设定</a></li>
+                                    <li><a href="#"><i class="fa fa-question-circle"></i>帮助</a></li>
+                                    <li><a href="signin.html"><i class="fa fa-sign-out"></i>注销</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- header-right -->
+
+            </div>
+            <!-- headerbar -->
+
+            <div class="pageheader">
+                <h2><i class="fa fa-home"></i>Blank Page </h2>
+                <div class="breadcrumb-wrapper">
+                    <span class="label">您的位置:</span>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">主页</a></li>
+                        <li class="active">主页</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="contentpanel">
+                <!-- content goes here... -->
+            </div>
+
+        </div>
+        <!-- mainpanel -->
+
+
+
+    </section>
+
+    
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.min.js"></script>--><!--优化旧浏览器脚本-->
+    
+    <script src="js/toggles.min.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/jquery.cookies.js"></script>
+
+    <script src="js/custom.js"></script>
+
+    <script src="js/jquery.sparkline.min.js"></script><!--小体积数据图表（左侧菜单底部）-->
+
+</body>
+</html>

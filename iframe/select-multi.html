@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="zh" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>管理系统</title>
+    <!-- ======基础样式开始======-->
+    <link href="css/bootstrap/style.default.css" rel="stylesheet">
+    <!--换肤-->
+    <link href="css/bootstrap/style.katniss.css" rel="stylesheet">
+    <!--IE8兼容样式-->
+    <link href="css/bootstrap/navigateLowerIE8.css" rel="stylesheet">
+    <!--本页单独用到的样式-->
+    <link href="js/zTree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet">
+    <!-- ======基础样式结束======-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/bootstrap/html5shiv.js"></script>
+    <script src="js/bootstrap/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="contentpanel">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns">
+                <a href="" class="panel-close">&times;</a>
+                <a href="" class="minimize">&minus;</a>
+            </div>
+            <h4 class="panel-title">多选</h4>
+        </div>
+        <div class="panel-body panel-body-nopadding">
+            <form class="form-horizontal form-bordered">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">原生select多选（按住ctrl）</label>
+                    <div class="col-sm-5">
+                        <select class="form-control input-sm mb15" multiple="true">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                        </select>
+
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">zTree下拉多选</label>
+                    <div class="col-sm-5 mb15">
+                        <div class="input-group">
+                            <input id="citySel" class="form-control" type="text" placeholder="请选择"  value=""  onclick="showMenu();" />
+                            <span class="input-group-addon">
+                                <buttong onclick="showMenu()">选择</buttong>
+                            </span>
+                        </div>
+
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--默认隐藏的ztree-->
+<div id="menuContent" class="ztree-select-content">
+    <ul id="treeDemo" class="ztree" style="margin-top:0; width:auto; height: 200px;"></ul>
+</div>
+    <script src="js/bootstrap/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/bootstrap/modernizr.min.js"></script>
+    <script src="js/bootstrap/retina.min.js"></script>
+    <script src="js/util/util.js"></script>
+   <!--本页当前用到的js-->
+<script src="js/zTree/js/jquery.ztree.all-3.5.min.js"></script>
+
+<SCRIPT type="text/javascript">
+    <!--
+    var setting = {
+        check: {
+            enable: true,
+            chkboxType: {"Y":"", "N":""}
+        },
+        view: {
+            dblClickExpand: false
+        },
+        data: {
+            simpleData: {
+                enable: true
+            }
+        },
+        callback: {
+            beforeClick: beforeClick,
+            onCheck: onCheck
+        }
+    };
+
+    var zNodes =[
+        {id:1, pId:0, name:"北京"},
+        {id:2, pId:0, name:"天津"},
+        {id:3, pId:0, name:"上海"},
+        {id:6, pId:0, name:"重庆"},
+        {id:4, pId:0, name:"河北省", open:true, nocheck:true},
+        {id:41, pId:4, name:"石家庄"},
+        {id:42, pId:4, name:"保定"},
+        {id:43, pId:4, name:"邯郸"},
+        {id:44, pId:4, name:"承德"},
+        {id:5, pId:0, name:"广东省", open:true, nocheck:true},
+        {id:51, pId:5, name:"广州"},
+        {id:52, pId:5, name:"深圳"},
+        {id:53, pId:5, name:"东莞"},
+        {id:54, pId:5, name:"佛山"},
+        {id:6, pId:0, name:"福建省", open:true, nocheck:true},
+        {id:61, pId:6, name:"福州"},
+        {id:62, pId:6, name:"厦门"},
+        {id:63, pId:6, name:"泉州"},
+        {id:64, pId:6, name:"三明"}
+    ];
+
+    function beforeClick(treeId, treeNode) {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+        zTree.checkNode(treeNode, !treeNode.checked, null, true);
+        return false;
+    }
+
+    function onCheck(e, treeId, treeNode) {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+                nodes = zTree.getCheckedNodes(true),
+                v = "";
+        for (var i=0, l=nodes.length; i<l; i++) {
+            v += nodes[i].name + ",";
+        }
+        if (v.length > 0 ) v = v.substring(0, v.length-1);
+        var cityObj = $("#citySel");
+        cityObj.attr("value", v);
+    }
+
+    function showMenu() {
+        var cityObj = $("#citySel");
+        var cityOffset = $("#citySel").offset();
+        $("#menuContent").css({left:cityOffset.left + "px", top:cityOffset.top + cityObj.outerHeight() + "px"}).slideDown("fast");
+
+        $("body").bind("mousedown", onBodyDown);
+    }
+    function hideMenu() {
+        $("#menuContent").fadeOut("fast");
+        $("body").unbind("mousedown", onBodyDown);
+    }
+    function onBodyDown(event) {
+        if (!(event.target.id == "menuBtn" || event.target.id == "citySel" || event.target.id == "menuContent" || $(event.target).parents("#menuContent").length>0)) {
+            hideMenu();
+        }
+    }
+
+    $(document).ready(function(){
+        $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+    //-->
+</SCRIPT>
+</body>
+</html>
